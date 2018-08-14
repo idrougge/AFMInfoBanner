@@ -267,13 +267,13 @@ static const CGFloat kDefaultHideInterval = 2.0;
     [self layoutIfNeeded];
 }
 
-- (void)show:(BOOL)animated withCompletion:(void (^)())completionBlock
+- (void)show:(BOOL)animated withCompletion:(void (^)(void))completionBlock
 {
     self.showCompletionBlock = completionBlock;
     [self show:animated];
 }
 
-- (void)hide:(BOOL)animated withCompletion:(void (^)())completionBlock
+- (void)hide:(BOOL)animated withCompletion:(void (^)(void))completionBlock
 {
     self.hideCompletionBlock = completionBlock;
     [self hide:animated];
